@@ -1,0 +1,129 @@
+//===== PALETTE ==========------------------------------//
+$color-primary-alpha: hsl(31, 77%, 52%);
+$color-primary-beta: hsl(184, 100%, 22%);
+$color-primary-gama: hsl(179, 100%, 13%);
+
+$color-neutral-alpha: hsla(0, 0%, 100%, 0.75);
+$color-neutral-beta: hsl(0, 0%, 95%);
+
+//===== TYPOGRAPHY ==========------------------------------//
+%text-font {
+  color: $color-neutral-alpha;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+%title-font {
+  color: $color-neutral-beta;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+//===== GLOBAL ==========------------------------------//
+%button {
+  @extend %text-font;
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 5rem;
+}
+
+//===== RESET ==========------------------------------//
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+//===== CATEGORY ==========------------------------------//
+.category {
+  align-items: center;
+  background: $color-neutral-beta;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__deck {
+    display: grid;
+    margin: 8.8rem 0;
+    width: min(87%, 92rem);
+  }
+
+  &__card {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: space-between;
+    padding: 4.8rem;
+
+    &:first-of-type {
+      background: $color-primary-alpha;
+      border-radius: 1rem 1rem 0 0;
+      color: $color-primary-alpha;
+    }
+
+    &:nth-of-type(2) {
+      background: $color-primary-beta;
+      color: $color-primary-beta;
+    }
+
+    &:last-of-type {
+      background: $color-primary-gama;
+      border-radius: 0 0 1rem 1rem;
+      color: $color-primary-gama;
+    }
+  }
+
+  &__info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__title {
+    @extend %title-font;
+  }
+
+  &__text {
+    @extend %text-font;
+  }
+
+  &__button {
+    @extend %button;
+    color: inherit;
+  }
+}
+
+//===== MEDIA QUERIES ==========------------------------------//
+@media screen and (min-width: 900px) {
+
+  .category {
+
+    &__deck {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__card {
+      gap: 8.5rem;
+
+      &:first-of-type {
+        border-radius: 1rem 0 0 1rem;
+      }
+
+      &:last-of-type {
+        border-radius: 0 1rem 1rem 0;
+      }
+    }
+  }
+
+}
