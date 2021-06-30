@@ -6,6 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+
   <!-- css -->
   <link rel="stylesheet" href="./css/style.css">
 
@@ -15,7 +21,39 @@
 
 <body>
 
-  <h1>3-column preview card component</h1>
+  <main class="main">
+    <section class="category">
+      <ul class="category__deck">
+        <li class="category__card">
+          <div class="category__info">
+            <img class="category__icon" src="./assets/img/icon-sedans.svg" alt="sedan category icon">
+            <h3 class="category__title">Sedans</h3>
+            <p class="category__text">Choose a sedan for its affordability and excellent fuel economy. Ideal for
+              cruising in the city or on your next road trip.</p>
+          </div>
+          <button class="category__button">Learn More</button>
+        </li>
+        <li class="category__card">
+          <div class="category__info">
+            <img class="category__icon" src="./assets/img/icon-suvs.svg" alt="suv category icon">
+            <h3 class="category__title">SUVs</h3>
+            <p class="category__text">Take an SUV for its spacious interior, power, and versatility. Perfect for your
+              next family vacation and off-road adventures.</p>
+          </div>
+          <button class="category__button">Learn More</button>
+        </li>
+        <li class="category__card">
+          <div class="category__info">
+            <img class="category__icon" src="./assets/img/icon-luxury.svg" alt="luxury category icon">
+            <h3 class="category__title">Luxury</h3>
+            <p class="category__text">Cruise in the best car brands without the bloated prices. Enjoy the enhanced
+              comfort of a luxury rental and arrive in style.</p>
+          </div>
+          <button class="category__button">Learn More</button>
+        </li>
+      </ul>
+    </section>
+  </main>
 
 </body>
 
