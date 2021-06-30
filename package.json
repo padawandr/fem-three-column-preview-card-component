@@ -1,0 +1,10 @@
+{
+  "name": "fem-three-column-preview-card-component",
+  "version": "1.0.0",
+  "description": "Frontend Mentor - 3-column preview card component",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": ["html", "css", "scss", "frontend mentor"],
+  "author": "wanderley rabelo",
+  "license": "MIT"
+}
